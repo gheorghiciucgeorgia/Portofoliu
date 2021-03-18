@@ -1,0 +1,585 @@
+/*------------------------------------LOADING PAGE-------------------------*/
+.preload{
+  width:100%;
+  height:100vh;
+  background-color:#d9c8bb;
+  position: fixed;
+  top:0;
+  left:0;
+  text-align: center;
+  transition: opacity 0.5s ease;
+}
+.preload .loader{
+  padding-top:15%;
+  display: block;
+}
+.loader img{
+  width:6%;
+  height:6%;
+  padding:15px;
+  animation:animationload 1.3s ease-in-out infinite;
+  animation-delay:calc(0.1s* var(--i));
+}
+@keyframes animationload{
+  0%{
+    transform: translateY(0px);
+  }
+  20%{
+    transform:translateY(-20px);
+  }
+  40%,100%{
+    transform:translateY(0px);
+  }
+}
+.wavy-loading{
+  font-family:Tw Cen MT;
+  font-size: 30pt;
+  color:white;
+}
+.wavy-loading span{
+  position: relative;
+  display: inline-block;
+  animation:animate-loading 1.3s ease-in-out infinite;
+  animation-delay:calc(0.1s* var(--i));
+}
+@keyframes animate-loading{
+  0%{
+    transform: translateY(0px);
+  }
+  20%{
+    transform:translateY(-20px);
+  }
+  40%,100%{
+    transform:translateY(0px);
+  }
+
+}
+.loader-finish{
+  opacity: 0;
+  pointer-events: none;
+}
+/*----------------------------------Top Navigation------------------------*/
+.main-header{
+  position: relative;
+  background-color: #083d3c;
+  overflow: hidden;
+}
+/*----------------------------------Style the links inside the navigation bar--------------*/
+.main-header .deco{
+  float:left;
+  color:white;
+  text-align: center;
+  text-decoration: none;
+  font-family:Tw Cen MT;
+  font-size:20px;
+  padding:14px 14px;
+}
+/*------------------------------changing the color of links on hover------------*/
+.main-header .deco:hover{
+  background-color: #a3cc87;
+  box-shadow: 0 0 10px #a3cc87,0 0 40px #a3cc87,0 0 80px #a3cc87;
+  color:#083d3c;
+  border:5px;
+  border-radius: 25px;
+}
+/*---------------------------centered section of the navigation bar---------*/
+.header-center{
+  float:none;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.header-center img{
+  width:20%;
+  height:20%;
+}
+.header-center img:hover{
+  animation:bop 0.45s 1 linear;
+}
+@keyframes bop{
+  0%{
+    transform: translateY(-10px);
+  }
+  20%,100%{
+    transform:translateY(0px);
+  }
+  40%{
+    transform:translateY(10px);
+  }
+}
+/*-------------------------------------right&left aligned items-----------------*/
+.header-right{
+  float:right;
+  padding-top:1%;
+  padding-right:0.5%;
+}
+.header-left img{
+  width:20%;
+  height:20%;
+}
+.header-left{
+  float:left;
+  padding:10px;
+  padding-left:15px;
+}
+.menu-wrap{
+  display:none;
+}
+/*-------------------------------MAIN PAGE--------------------------*/
+.main-page{
+  position: relative;
+}
+.background{
+  position: absolute;
+  top:-5px;
+}
+.background .background-image{
+  width:100%;
+  height:100%;
+  display: block;
+}
+.background-image-media{
+  display:none;
+}
+.background-image-media-about{
+  display: none;
+}
+.background-image-media1{
+  display: none;
+}
+.background .introduction{
+  position: absolute;
+  top:15%;
+  left:5%;
+  line-height: 0.3;
+}
+.introduction h1{
+  font-family:Tw Cen MT;
+  color:white;
+  font-size:50pt;
+}
+.introduction h2{
+  font-family: Tw Cen MT;
+  color:white;
+  font-size: 35pt;
+}
+/*------------------------------------Wavy text-----------------------------*/
+.wavy{
+  position: relative;
+  -webkit-box-reflect:below -12px linear-gradient(transparent,rgba(0,0,0,0,0.2));
+}
+.wavy span{
+  position: relative;
+  display: inline-block;
+  animation:animate 1.5s ease-in-out 2;
+  animation-delay:calc(0.1s* var(--i));
+}
+@keyframes animate{
+  0%{
+    transform: translateY(0px);
+    color:#083d3c;
+  }
+  20%{
+    transform:translateY(-20px);
+    color:#a3cc87;
+  }
+  40%,100%{
+    transform:translateY(0px);
+    color:#ee986b;
+  }
+
+}
+.introduction p{
+  font-family: Tw Cen MT;
+  font-size: 15pt;
+  opacity: 0.75;
+  color:white;
+}
+/*-----------------------------------Contact me button main page-----------*/
+.introduction a{
+  text-decoration: none;
+  font-family: Tw Cen MT;
+  font-size:15pt;
+  background-color: #a3cc87;
+  color:white;
+  border:20px;
+  border-radius: 25px;
+  padding:18px;
+  display: inline-block;
+  margin-top:20px;
+  margin-left:150px;
+}
+.introduction a:hover{
+  box-shadow: 0 0 10px #a3cc87,0 0 40px #a3cc87,0 0 80px #a3cc87;
+  color:#093e3d;
+}
+
+/*------------------------------------Main page finish-----------------*/
+/*------------------------------------ABOUT PAGE--------------------*/
+.background .back2{
+  width:100%;
+  height:100%;
+  display: block;
+}
+.back2-media{
+  display:none;
+}
+.back3-media{
+  display:none;
+}
+.background .about-me-text{
+  position: absolute;
+  top:5%;
+  left:20%;
+  padding-right: 50px;
+  line-height: 1.2;
+  text-align:left;
+  color:white;
+  font-family:Tw Cen MT;
+}
+.about-me-text img{
+  width:6%;
+  height:6%;
+  display: inline-block;
+  float:right;
+}
+.about-me-text h2{
+  color:#a3cc87;
+  font-size: 50px;
+}
+.about-me-text p{
+  font-size: 15pt;
+}
+.skills .title-skills{
+  position: relative;
+  font-size: 30pt;
+  color:#a3cc87;
+}
+.column {
+  float: left;
+  width: 15.33%;
+  padding-right:50px;
+}
+.column img{
+  width:50%;
+  height:50%; 
+  vertical-align: middle;
+  text-align: left;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row{
+  position: absolute;
+  bottom:-120px;
+}
+.style-img{
+  position: relative; top:10px; left:25px;
+}
+.mobile-skills{
+  display:none;
+}
+/*----------------------------------Scroll page------------------*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #072f2e;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #abcb96;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*-------------------------------------Contact me form------------------------*/
+.background .contact-title{
+  color:white;
+  font-family:Tw Cen MT;
+   font-size: 20pt;
+ }
+.background .form{
+  position: absolute;
+  top:10%;
+  line-height: 1.2;
+  text-align:center;
+  color:white;
+  font-family:Tw Cen MT;
+  display: inline-block;
+  width: 100%;
+}
+.form-control{
+  margin-bottom:10px;
+  width:45%;
+}
+input[type="text"]
+{
+  border-radius: 10px;
+  border-color:black;
+  border-width: 3px;
+  border-style:solid;
+  padding:10px;
+  width:45%;
+  outline:none;
+  padding-left:10px;
+  background-color: black;
+  opacity:0.5;
+  display: inline;
+  color:white;
+}
+input[type="email"]{
+  border-radius: 10px;
+  border-color:black;
+  border-width: 3px;
+  border-style:solid;
+  padding:10px;
+  width:45%;
+  outline:none;
+  padding-left:10px;
+  background-color: black;
+  opacity:0.5;
+  display: inline;
+  color:white;
+}
+textarea{
+  border-radius: 10px;
+  border-color:black;
+  border-width: 3px;
+  border-style:solid;
+  padding:10px;
+  width:64%;
+  outline:none;
+  padding-left:10px;
+  background-color: black;
+  opacity:0.5;
+  display: inline;
+  color:white;
+  padding-bottom: 80px;
+}
+input[type="submit"]{
+  background-color: #a3cc87;
+  color:white;
+  border:20px;
+  border-radius: 25px;
+  padding:18px;
+  display: inline-block;
+  margin-top:20px;
+  outline: none;
+  width:15%;
+}
+input[type="submit"]:hover{
+  box-shadow: 0 0 10px #a3cc87,0 0 40px #a3cc87,0 0 80px #a3cc87;
+  color:#093e3d;
+}
+/*------------------------------------------WORK PAGE------------------------------------*/
+.background .test{
+  position: absolute;
+  top:0%;
+  width: 100%;
+}
+.test img{
+  width:25%;
+  height:25%;
+  align-items: center;
+  padding-left:70px;
+  padding-top:50px;
+}
+/*----------------------------------HOVER IMAGES EFFECT-------------------------------*/
+.test img:hover{
+  animation:bip 0.45s 1 linear;
+}
+@keyframes bip{
+  0%{
+    transform: translateY(-10px);
+  }
+  20%,100%{
+    transform:translateY(0px);
+  }
+  40%{
+    transform:translateY(10px);
+  }
+}
+/*---------------------------LOGO PRESENTAIONS-----------------------------------------*/
+.background .box{
+  position: absolute;
+  top:10%;
+  left:3%;
+}
+.box{
+  width:85%;
+  height:80%;
+  background-color: #083d3c;
+}
+.box .image-description{
+  line-height: 1.2;
+  text-align:left;
+  font-family:Tw Cen MT;
+  display: inline-block;
+  font-size:18pt;
+  position: absolute;
+  left:60%;
+  right:5%;
+  top:10%;
+  color:white;
+}
+.image-description h2{
+  font-size:25pt;
+}
+.image-description a{
+  text-decoration: none;
+  color:green;
+}
+.image-description .copyrigth{
+  font-size:12pt;
+}
+/*------------------------SLIDE SHOW-------------------------------------------------*/
+/* Slideshow container */
+.box .slideshow-container{
+  position: absolute;
+  display: inline-block;
+  left:3%;
+  width:50%;
+  top:5%;
+}
+/*.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}*/
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.slideshow-container .dots{
+  position: absolute;
+  align-items: center;
+  left:35%;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: white;
+  opacity:0.5;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}g  
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/*---------------------------------------STOCK PAGE---------------------------*/
+.slideshow-container .dots1{
+  position: absolute;
+  align-items: center;
+  left:45%;
+}
+/*---------------------------------404 Page-------------------------*/
+.background .new{
+  position: absolute;
+  top:5%;
+  left:30%;
+  line-height: 0.3;
+}
+.new{
+ font-family: Tw Cen MT;
+  font-size: 50pt;
+  opacity: 1;
+  color:#083d3c;
+}
+.background .introduction-new1{
+  top:30%;
+  left:10%;
+  line-height: 1;
+  position:absolute;
+}
+.introduction-new1{
+  font-family: Tw Cen MT;
+  font-size: 45pt;
+  opacity: 1;
+  color:#083d3c;
+}
+.introduction-new1 a{
+  text-decoration:none;
+  color:inherit;
+}
